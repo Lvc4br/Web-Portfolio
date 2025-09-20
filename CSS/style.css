@@ -505,6 +505,7 @@ header.sticky {
 
 .certification-list li:hover {
   transform: scale(1.03);
+  cursor: pointer;
 }
 
 .certification-list img {

@@ -1,5 +1,5 @@
 // -------------------- ParticlesJS --------------------
-// Inicializa o ParticlesJS no elemento com id "particles-js"
+/*// Inicializa o ParticlesJS no elemento com id "particles-js"
 particlesJS("particles-js", {
   "particles": {
     // Quantidade de partículas e densidade
@@ -88,7 +88,7 @@ particlesJS("particles-js", {
   // Detecta telas retina
   "retina_detect": true
 });
-
+*/
 
 
 // -------------------- Menu Responsivo --------------------
@@ -265,19 +265,43 @@ window.addEventListener('scroll', () => {
 });
 
 
-function openCertModal(src) {
+// Abre modal com certificado
+function openCertModal(src, alt = '') {
   const modal = document.getElementById("certModal");
   const modalImg = document.getElementById("certImg");
   const captionText = document.getElementById("certCaption");
 
   modal.style.display = "block";
   modalImg.src = src;
-  captionText.innerHTML = modalImg.alt;
+  modalImg.alt = alt;
+  captionText.innerHTML = alt;
+
+  // Reset zoom
+  modalImg.style.transform = 'scale(1)';
+  modalImg.dataset.scale = 1;
 }
 
+// Fecha modal
 function closeCertModal() {
   const modal = document.getElementById("certModal");
   modal.style.display = "none";
 }
+
+// Zoom via clique
+const certImg = document.getElementById("certImg");
+certImg.addEventListener('click', () => {
+  let scale = Number(certImg.dataset.scale) || 1;
+  scale = scale === 1 ? 1.5 : 1; // alterna entre 1x e 2x
+  certImg.style.transform = `scale(${scale})`;
+  certImg.dataset.scale = scale;
+});
+
+// Clique no <li> abre modal
+document.querySelectorAll('.certification-list li').forEach(li => {
+  li.addEventListener('click', () => {
+    const img = li.querySelector('img');
+    if (img) openCertModal(img.src, img.alt);
+  });
+});
 
 

@@ -535,7 +535,7 @@ header.sticky {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: auto; /* permite scroll se necessário */
   background-color: rgba(0,0,0,0.9);
 }
 
@@ -544,11 +544,14 @@ header.sticky {
   display: block;
   max-width: 90%;
   max-height: 80%;
-  transition: transform 0.3s;
+  cursor: grab; /* indica que pode arrastar */
+  transition: transform 0.2s ease;
 }
 
+/* Removido efeito hover */
 .cert-modal-content:hover {
-  transform: scale(1.1);
+  transform: none;
+  cursor: zoom-in;
 }
 
 .cert-close {
@@ -568,6 +571,7 @@ header.sticky {
   color: #ccc;
   padding: 10px 0;
 }
+
 
 
 /* ================portfolio================ */

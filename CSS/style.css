@@ -59,6 +59,16 @@
   --spacing-5: 48px;
 }
 
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;  /* Garantindo que cubra toda a tela */
+    z-index: -1;    /* Partículas ficam atrás de todos os outros conteúdos */
+    background-color: rgba(0, 0, 0, 0.1); /* Preto fosco */
+}
+
 *,
 *::before,
 *::after {

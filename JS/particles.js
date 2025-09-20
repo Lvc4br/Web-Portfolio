@@ -1,4 +1,96 @@
 // -------------------- ParticlesJS --------------------
+// Inicializa o ParticlesJS no elemento com id "particles-js"
+particlesJS("particles-js", {
+  "particles": {
+    // Quantidade de partículas e densidade
+    "number": {
+      "value": 125, 
+      "density": {
+        "enable": true,
+        "value_area": 800 
+      }
+    },
+    // Cor das partículas
+    "color": {
+      "value": "#e0e0e0"
+    },
+    // Formato das partículas
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      }
+    },
+    // Opacidade das partículas
+    "opacity": {
+      "value": 0.6,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0.1
+      }
+    },
+    // Tamanho das partículas
+    "size": {
+      "value": 5,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 40,
+        "size_min": 0.1
+      }
+    },
+    // Linhas que conectam as partículas
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ff0000",
+      "opacity": 0.4,
+      "width": 1
+    },
+    // Movimento das partículas
+    "move": {
+      "enable": true,
+      "speed": 5,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    // Interatividade detectada na janela
+    "detect_on": "window",
+    "events": {
+      // Efeito ao passar o mouse (repulsão)
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      // Efeito ao clicar (adiciona partículas)
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      }
+    }
+  },
+  // Detecta telas retina
+  "retina_detect": true
+});
+
+
+
 // -------------------- Menu Responsivo --------------------
 const menuIcon = document.getElementById("menu-icon");
 const closeIcon = document.getElementById("close-icon");

@@ -731,7 +731,7 @@ header.sticky {
   align-items: center;
   gap: 8px;
   font-weight: bold;
-  color: var(--secondary-color, #ff5555);
+  color: var(--hover-primary);
   text-decoration: none;
   margin-top: 10px;
 }

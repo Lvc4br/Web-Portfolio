@@ -173,5 +173,19 @@ window.addEventListener('scroll', () => {
 });
 
 
+function openCertModal(src) {
+  const modal = document.getElementById("certModal");
+  const modalImg = document.getElementById("certImg");
+  const captionText = document.getElementById("certCaption");
+
+  modal.style.display = "block";
+  modalImg.src = src;
+  captionText.innerHTML = modalImg.alt;
+}
+
+function closeCertModal() {
+  const modal = document.getElementById("certModal");
+  modal.style.display = "none";
+}
 
 
